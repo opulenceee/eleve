@@ -23,25 +23,280 @@
     <link rel="stylesheet" href="/assets/css/header.css" />
     <link rel="stylesheet" href="/assets/css/footer.css" />
     <link rel="stylesheet" href="/assets/css/terms.css" />
-
+    <link rel="stylesheet" href="/assets/css/talent-contract.css" />
     <link rel="stylesheet" href="/assets/css/font-awesome.css" />
-    <title>Elevé Los Santos</title>
+    <title>Elevé | Los Santos</title>
     <header class="header-area">
       <div class="header-container">
-        <div class="logo">PLUSH</div>
+        <div class="logo">Elevé</div>
         <nav>
           <ul>
             <li><a href="index.html">Homé</a></li>
-            <li><a href="about.html">About Elevé</a></li>
-            <li><a href="work.html">Work With Us</a></li>
-            <li><a href="work.html">Get In Touch</a></li>
+            <li><a href="index.html#what-we-do">About Elevé</a></li>
+            <li><a href="index.html#get-in-touch">Work With Us</a></li>
+            <li><a href="index.html#get-in-touch">Get In Touch</a></li>
           </ul>
         </nav>
-        <button class="cta-button">Let's Talk</button>
+        <a href="index.html#get-in-touch">
+          <button class="primary-btn">Let's Talk</button>
+        </a>
       </div>
     </header>
   </head>
   <body>
+    <div id="content-talent">
+      <h1>Please enter your details to access the contract</h1>
+      <form id="accessForm">
+        <input
+          type="text"
+          id="usernameForm"
+          name="username"
+          placeholder="Enter FirstName_LastName"
+          required
+        />
+        <input
+          type="password"
+          id="passwordForm"
+          name="password"
+          placeholder="Enter password here"
+          required
+        />
+        <button type="submit" class="primary-btn mt-40" id="log-in-to-contract">
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <section
+      class="terms-content py-110"
+      style="display: none"
+      id="contractContent"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3">
+            <div class="section-top text-center">
+              <h2>Talent <span>Contract</span></h2>
+              <p class="mt-20">
+                This Talent Agreement ("Agreement") is made and entered into on
+                <span id="currentDate"></span>, by and between Los Angels
+                Entertainment, LLC, DBA PLUSH ("Agency") and
+                <span id="modelName"></span> ("Model"). This Agreement outlines
+                the terms and conditions under which the Model will provide
+                services to the Agency.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-60">
+          <div class="col-lg-8 offset-lg-2">
+            <div class="terms-box">
+              <h4>Scope of Agreement</h4>
+              <p class="mt-20">
+                The Agency agrees to hire the Model, and the Model agrees to
+                provide services such as modeling, dancing, or any other
+                relevant services for the Agency, as requested and agreed upon.
+                The Model will participate in events, photoshoots, promotional
+                campaigns, performances, and other assignments as assigned by
+                the Agency.
+              </p>
+
+              <h4 class="mt-50">Term of Agreement</h4>
+              <p class="mt-20">
+                The term of this Agreement will begin on
+                <?php echo $currentDate; ?>
+                and will remain in effect until
+                <?php echo $endDate; ?>
+                unless terminated earlier as per the terms provided in this
+                Agreement.
+              </p>
+
+              <h4 class="mt-50">Exclusivity</h4>
+              <p class="mt-20">
+                The Model agrees to work exclusively with the Agency for the
+                duration of this Agreement. During this time, the Model shall
+                not engage in any modeling, promotional work, or other services
+                for any other company, agency, or individual without prior
+                written consent from the Agency's management. A breach of this
+                exclusivity clause may result in the immediate termination of
+                this Agreement, legal action for any resulting damages, or other
+                financial penalties.
+              </p>
+
+              <h4 class="mt-50">Usage Rights & Content Ownership</h4>
+              <p class="mt-20">
+                a. The Agency shall have the exclusive right to use, reproduce,
+                distribute, display, or license any photographs, videos, media,
+                or other content created during the Model's assignments for
+                commercial, promotional, or other purposes, including online and
+                print media.
+              </p>
+              <p class="mt-20">
+                b. The Model agrees that all content produced for the Agency,
+                including photos, videos, recordings, or live performances, is
+                the sole property of the Agency, and the Model waives any rights
+                to ownership of this content.
+              </p>
+              <p class="mt-20">
+                c. The Model agrees that they will not use, distribute, or
+                display any content produced for the Agency without prior
+                written consent from the Agency.
+              </p>
+
+              <h4 class="mt-50">Model Obligations</h4>
+              <p class="mt-20">The Model agrees to:</p>
+              <ul>
+                <li>
+                  Provide professional services as required, including modeling,
+                  dancing, influencing, atmosphere modeling, and production
+                  modeling;
+                </li>
+                <li>
+                  Maintain professional conduct at all events, performances, or
+                  assignments;
+                </li>
+                <li>
+                  Adhere to all instructions provided by the Agency, including
+                  those related to safety, appearance, and behavior standards;
+                </li>
+                <li>
+                  Ensure that their physical appearance, including hair, makeup,
+                  wardrobe, and hygiene, meets the Agency’s standards.
+                </li>
+              </ul>
+
+              <h4 class="mt-50">Agency Obligations</h4>
+              <p class="mt-20">The Agency agrees to:</p>
+              <ul>
+                <li>
+                  Provide the Model with reasonable notice of assignments,
+                  including details about location, time, and performance
+                  requirements;
+                </li>
+                <li>
+                  Provide safe and professional environments for all
+                  assignments;
+                </li>
+                <li>
+                  Ensure all promotional material is appropriate and aligned
+                  with the Model's agreed-upon terms of service.
+                </li>
+              </ul>
+
+              <h4 class="mt-50">Confidentiality and Non-Disclosure</h4>
+              <p class="mt-20">
+                The Model agrees to maintain the confidentiality of all
+                proprietary, sensitive, or confidential information related to
+                the Agency, its clients, partners, and projects during and after
+                the term of this Agreement. This includes, but is not limited
+                to, information related to the Agency's business practices,
+                client lists, project details, and any private events attended
+                by the Model.
+              </p>
+
+              <h4 class="mt-50">Behavior and Conduct</h4>
+              <p class="mt-20">
+                The Model acknowledges that they are expected to behave in a
+                manner that positively reflects on the Agency during all
+                assignments and events. Any unprofessional or inappropriate
+                behavior, including but not limited to intoxication, failure to
+                adhere to the dress code, or conduct that violates public
+                decency laws, may result in immediate termination of this
+                Agreement without further payment obligations by the Agency.
+              </p>
+
+              <h4 class="mt-50">Termination</h4>
+              <p class="mt-20">
+                a. Either party may terminate this Agreement with written
+                notice.
+              </p>
+              <p class="mt-20">
+                b. The Agency may terminate the Agreement immediately if the
+                Model fails to meet professional standards, violates any clause,
+                or engages in conduct that could harm the Agency's reputation.
+              </p>
+              <p class="mt-20">
+                c. Upon termination, the Agency retains ownership of all content
+                created during the course of the agreement.
+              </p>
+
+              <h4 class="mt-50">Independent Contractor Status</h4>
+              <p class="mt-20">
+                The Model is an independent contractor and not an employee of
+                the Agency. The Model shall be responsible for all taxes,
+                insurance, and other financial obligations related to their
+                earnings. The Model acknowledges that they are not entitled to
+                any benefits provided to employees, including health insurance,
+                worker's compensation, or retirement plans.
+              </p>
+
+              <h4 class="mt-50">Liability and Waiver</h4>
+              <p class="mt-20">
+                The Model agrees to release the Agency from any liability
+                related to injuries, accidents, or incidents that may occur
+                during performances, photoshoots, or other assignments unless
+                such incidents are caused by gross negligence by the Agency. The
+                Model also waives any claims to compensation beyond what is
+                explicitly discussed on a per-gig basis prior to each
+                assignment.
+              </p>
+
+              <h4 class="mt-50">Governing Law</h4>
+              <p class="mt-20">
+                This Agreement shall be governed by and construed in accordance
+                with the laws of San Andreas. Any disputes arising from this
+                Agreement will be resolved in the courts of San Andreas.
+              </p>
+
+              <h4 class="mt-50">Entire Agreement</h4>
+              <p class="mt-20">
+                This Agreement constitutes the entire understanding between the
+                parties regarding the subject matter hereof and supersedes all
+                prior agreements, understandings, and representations, whether
+                written or oral. No modifications to this Agreement shall be
+                valid unless in writing and signed by both parties.
+              </p>
+            </div>
+            <div class="contact-form-3">
+              <form
+                id="talentContract"
+                method="POST"
+                enctype="multipart/form-data"
+                novalidate
+              >
+                <div class="form-group mt-60">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Signature *"
+                    required
+                  />
+                </div>
+                <div class="form-group mb-0">
+                  <input
+                    type="checkbox"
+                    id="privacy-policy"
+                    name="privacy-policy"
+                    required
+                  />
+                  <label class="privacy-policy" for="privacy-policy"
+                    >By typing my signature below, I confirm that I am at least
+                    18 years old (( IC and OOC )), and I understand that typing
+                    my name constitutes my electronic signature. I agree that
+                    this electronic signature has the same legal effect as a
+                    handwritten signature, and I am entering into a legally
+                    binding contract. I also agree to the
+                    <a href="privacy.html">privacy policy</a>.</label
+                  >
+                </div>
+                <button type="submit" class="primary-btn">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer>
       <!-- Main Footer Container -->
       <div class="footer-highlight">
@@ -89,5 +344,6 @@
         </p>
       </div>
     </footer>
+    <script src="assets/js/talent-contract.js"></script>
   </body>
 </html>

@@ -43,23 +43,3 @@ nav a {
 nav a:hover {
   color: #f8a2e1;
 }
-
-.cta-button {
-  background-color: #f8a2e1;
-  border: none;
-  color: #000;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 15px;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Adding transition for background and text color */
-}
-
-.cta-button:hover {
-  background-color: transparent; /* Fades out the background color */
-  color: #f8a2e1; /* Changes text color to pink */
-  border: 1px solid #f8a2e1; /* Optionally, add a border in pink */
-}

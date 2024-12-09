@@ -223,7 +223,6 @@ img {
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  text-decoration: none;
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -600,7 +599,7 @@ img {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 25px;
+  font-size: 20px;
   background: -webkit-gradient(
     linear,
     left top,
@@ -616,20 +615,6 @@ img {
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-}
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  .primary-btn {
-    padding: 8px 10px;
-  }
-}
-
-.primary-btn span {
-  font-size: 26px;
-  line-height: 24px;
-  position: relative;
-  top: 3px;
-  left: -5px;
 }
 
 .primary-btn:hover {
