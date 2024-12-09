@@ -1,0 +1,1020 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap");
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: white;
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  background-color: #141414;
+}
+
+p {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+a:focus,
+input:focus,
+textarea:focus,
+select:focus,
+button:focus,
+.slick-slide {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+header {
+  background-color: #141414;
+  color: #fff;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  font-size: 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 20px;
+}
+
+nav a:hover {
+  color: #f8a2e1;
+}
+
+.cta-button {
+  background-color: #f8a2e1;
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Adding transition for background and text color */
+}
+
+.cta-button:hover {
+  background-color: transparent; /* Fades out the background color */
+  color: #f8a2e1; /* Changes text color to pink */
+  border: 1px solid #f8a2e1; /* Optionally, add a border in pink */
+}
+
+footer {
+  background-color: #141414; /* Dark background for contrast */
+  color: #fff; /* White text for visibility */
+  padding: 20px;
+  text-align: center;
+  font-family: "Inter", sans-serif; /* Modern font */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 0;
+  border-bottom: 2px solid #f8a2e1; /* Pink underline */
+}
+
+.footer-links a {
+  color: #f8a2e1; /* Pink text for links */
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.footer-links a:hover {
+  text-decoration: none;
+}
+
+.disclaimer {
+  font-size: 12px;
+  color: #ccc; /* Subtle gray text */
+  margin-top: 10px;
+}
+
+/* Pink Border Container */
+.footer-highlight {
+  margin: 20px auto;
+  padding: 20px 40px;
+  max-width: 1200px; /* Adjust width as needed */
+  height: 40px; /* Adjust height for better visibility */
+  background-color: #141414;
+  color: #000;
+  border: 1px solid #4f4f4f;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  align-items: center;
+}
+
+/* Align items in the footer-highlight container with space between them */
+.footer-highlight-container {
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly with space between */
+  align-items: center; /* Align items vertically */
+  gap: 20px; /* Add space between items */
+}
+
+/* Style each footer item */
+.footer-item {
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Logo styling */
+.footer-item img {
+  max-width: 100px; /* Ensure logo is not too large */
+}
+
+/* Social Button with pink border */
+.social-button {
+  padding: 10px 20px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.social-button:hover {
+  color: #f8a2e1;
+  color: white;
+  text-decoration: none;
+  border: 2px solid #f8a2e1;
+}
+
+/* Phone Number & Location styling */
+.phone-number,
+.location {
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Link styling */
+.footer-highlight a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-highlight a:hover {
+  color: #f8a2e1;
+}
+
+/* Make "Made For" section at the bottom of the page */
+.made-for {
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  color: #ccc;
+}
+
+.made-for a {
+  color: #f8a2e1;
+}
+
+.made-for a:hover {
+  text-decoration: underline;
+}
+
+/* Marquee Styles */
+/* custom marquee */
+.custom-marquee .marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.custom-marquee .marquee {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.custom-marquee .marquee-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: marquee 30s linear infinite;
+  animation: marquee 30s linear infinite;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .custom-marquee .marquee-content {
+    -webkit-animation: marquee 20s linear infinite;
+    animation: marquee 20s linear infinite;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .custom-marquee .marquee-content {
+    -webkit-animation: marquee 10s linear infinite;
+    animation: marquee 10s linear infinite;
+  }
+}
+
+.custom-marquee .primary-bg {
+  padding: 10px 0;
+  background-color: #f8a2e1;
+}
+
+.custom-marquee .primary-bg span {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.custom-marquee .black-bg {
+  padding: 10px 0;
+  background-color: #000000;
+}
+
+.custom-marquee .black-bg span {
+  color: #f8a2e1;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.custom-marquee .marquee-row-1 {
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+}
+
+.custom-marquee .marquee-row-2 {
+  animation-direction: reverse;
+}
+
+.custom-marquee .marquee-content span {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+/* General Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-start; /* Align to left */
+  align-items: flex-start; /* Align to top */
+}
+
+.col-lg-5 {
+  flex: 0 0 50%; /* Makes the column take up 50% of the width */
+  padding: 15px;
+}
+
+/* Hero Section */
+.hero-left {
+  text-align: left; /* Ensures the text is aligned to the left */
+  padding: 40px; /* Add padding to create space around text */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.title_one {
+  font-size: 36px; /* Adjust size as needed */
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px; /* Space between title and text */
+}
+
+.title_one span {
+  color: #f8a2e1; /* Optional color for the #1 */
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.secondary-btn {
+  color: #f8a2e1;
+  border: 1px solid #f8a2e1;
+  border-radius: 30px;
+  text-align: center;
+  font-weight: 500;
+  display: inline-block;
+  text-transform: capitalize;
+  padding: 8px 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 18px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(50%, #f8a2e1),
+    color-stop(50%, transparent)
+  );
+  background: -webkit-linear-gradient(left, #f8a2e1 50%, transparent 50%);
+  background: -o-linear-gradient(left, #f8a2e1 50%, transparent 50%);
+  background: linear-gradient(to right, #f8a2e1 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .secondary-btn {
+    padding: 8px 10px;
+  }
+}
+
+.secondary-btn:hover {
+  background-position: left bottom;
+  color: #141414;
+}
+
+.vector-4 {
+  width: 20px;
+  height: 20px;
+}
+
+/* Grayscale Image */
+.grayscale-image-wrapper {
+  margin-top: 40px;
+}
+
+.grayscale-image {
+  filter: grayscale(100%);
+  width: 100%; /* Adjust to your desired image width */
+  height: auto;
+}
+
+.grayscale-image:hover {
+  filter: grayscale(0%); /* Removes grayscale on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .col-lg-5 {
+    flex: 0 0 100%; /* Stacks the column on smaller screens */
+  }
+
+  .title_one {
+    font-size: 28px; /* Adjust title size for smaller screens */
+  }
+}
+
+/* get in touch area */
+.get-in-touch-area {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  overflow: hidden;
+  padding: 140px 0 300px;
+  background-color: #141414;
+  text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .get-in-touch-area {
+    padding: 60px 0 180px;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .get-in-touch-area {
+    padding: 60px 0 180px;
+    background-size: cover;
+  }
+}
+
+.get-in-touch-area a.big-title {
+  font-size: 100px;
+  line-height: 1.2em;
+  position: relative;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(50%, #f8a2e1),
+    color-stop(50%, #ffffff)
+  );
+  background: -webkit-linear-gradient(left, #f8a2e1 50%, #ffffff 50%);
+  background: -o-linear-gradient(left, #f8a2e1 50%, #ffffff 50%);
+  background: linear-gradient(90deg, #f8a2e1 50%, #ffffff 50%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  display: inline-block;
+  -webkit-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+.get-in-touch-area a.big-title span {
+  display: block;
+}
+
+.get-in-touch-area a.big-title span.icon {
+  font-size: 110px;
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .get-in-touch-area a.big-title {
+    font-size: 48px;
+  }
+  .get-in-touch-area a.big-title span.icon {
+    font-size: 55px;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .get-in-touch-area a.big-title {
+    font-size: 40px;
+  }
+  .get-in-touch-area a.big-title span.icon {
+    font-size: 45px;
+    margin-top: 4px;
+  }
+}
+
+.get-in-touch-area a.big-title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  width: 0;
+  height: 4px;
+  background: #f8a2e1;
+  -webkit-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+.get-in-touch-area a.big-title:hover {
+  background-position: 0;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.get-in-touch-area a.big-title:hover:after {
+  right: 0;
+  width: 98%;
+}
+
+.get-in-touch-area a.big-title:hover span {
+  color: #f8a2e1;
+}
+
+/* form */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .contact-form-3 {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contact-form-3 {
+    margin-top: 40px;
+  }
+}
+
+.contact-form-3 .budget-option {
+  display: inline-block;
+  margin: 0 10px 10px 0;
+}
+
+.contact-form-3 .budget-option input {
+  display: none;
+}
+
+.contact-form-3 .budget-option span {
+  font-size: 20px;
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid #4f4f4f;
+  border-radius: 30px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  -o-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-form-3 .budget-option input:checked + span {
+  background-color: #f8a2e1;
+  color: #141414;
+  border: 1px solid transparent;
+}
+
+.contact-form-3 form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 60px;
+}
+
+.contact-form-3 .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form-3 label {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.contact-form-3 input,
+.contact-form-3 textarea {
+  font-size: 18px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Slight background to make inputs visible */
+  border: 1px solid #4f4f4f; /* Add a border */
+  border-radius: 5px; /* Optional: rounded corners */
+  color: white; /* Keep white text */
+  padding: 10px;
+  width: 100%;
+  transition: border-color 0.3s;
+}
+
+.contact-form-3 input:focus,
+.contact-form-3 textarea:focus {
+  outline: none;
+  border-color: #f8a2e1; /* Highlight border on focus */
+}
+
+.contact-form-3 .radio-buttons .form-group {
+  padding: 10px 45px 10px 15px;
+  border: 1px solid #4f4f4f;
+  border-radius: 20px;
+  display: inline-block;
+  margin-right: 15px;
+  line-height: 0;
+  margin-bottom: 15px;
+}
+
+.contact-form-3 .radio-buttons input[type="radio"] {
+  display: none;
+}
+
+.contact-form-3 .radio-buttons label {
+  cursor: pointer;
+  position: relative;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 0;
+  margin: 0;
+  text-transform: capitalize;
+  padding: 10px 0;
+}
+
+.contact-form-3 .radio-buttons label::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  top: 50%;
+  right: -25px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: border-color 400ms ease;
+  -o-transition: border-color 400ms ease;
+  transition: border-color 400ms ease;
+}
+
+.contact-form-3 .radio-buttons label::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #f8a2e1;
+  border: 1px solid #f8a2e1;
+  border-radius: 50%;
+  top: 50%;
+  right: -25px;
+  -webkit-transform: translateY(-50%) scale(0);
+  -ms-transform: translateY(-50%) scale(0);
+  transform: translateY(-50%) scale(0);
+  -webkit-transition: -webkit-transform 400ms ease;
+  transition: -webkit-transform 400ms ease;
+  -o-transition: transform 400ms ease;
+  transition: transform 400ms ease;
+  transition: transform 400ms ease, -webkit-transform 400ms ease;
+}
+
+.contact-form-3 .radio-buttons input[type="radio"]:checked + label::before {
+  border-color: #f8a2e1;
+}
+
+.contact-form-3 .radio-buttons input[type="radio"]:checked + label::after {
+  -webkit-transform: translateY(-50%) scale(0.55);
+  -ms-transform: translateY(-50%) scale(0.55);
+  transform: translateY(-50%) scale(0.55);
+}
+
+.contact-form-3 label.privacy-policy {
+  font-size: 16px;
+  position: relative;
+  top: -5px;
+}
+
+.contact-form-3 label.privacy-policy a {
+  color: #4f4f4f;
+  text-decoration: underline;
+}
+
+.contact-form-3 .attachment-btn {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.contact-form-3 .attachment-btn i {
+  margin-right: 5px;
+}
+
+.contact-form-3 button.primary-btn {
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+.contact-form-3 .primary-btn i {
+  margin-left: 0;
+}
+
+.contact-form-3 input[type="checkbox"] {
+  margin-right: 10px;
+  width: auto;
+  float: left;
+}
+
+/* button */
+.primary-btn {
+  text-decoration: none;
+  color: #141414;
+  border: 1px solid #f8a2e1;
+  border-radius: 30px;
+  text-align: center;
+  font-weight: 500;
+  display: inline-block;
+  text-transform: capitalize;
+  padding: 8px 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 25px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(50%, transparent),
+    color-stop(50%, #f8a2e1)
+  );
+  background: -webkit-linear-gradient(left, transparent 50%, #f8a2e1 50%);
+  background: -o-linear-gradient(left, transparent 50%, #f8a2e1 50%);
+  background: linear-gradient(to right, transparent 50%, #f8a2e1 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .primary-btn {
+    padding: 8px 10px;
+  }
+}
+
+.primary-btn span {
+  font-size: 26px;
+  line-height: 24px;
+  position: relative;
+  top: 3px;
+  left: -5px;
+}
+
+.primary-btn:hover {
+  background-position: left bottom;
+  color: #f8a2e1;
+}
+
+h1 {
+  color: white;
+  font-size: 60px;
+  font-weight: 700;
+}
+h1 span {
+  color: #f8a2e1;
+}
+
+/*talent-contract*/
+h2 {
+  color: #b0b0b0;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+h2 span {
+  color: #f8a2e1;
+}
+
+/* Remove default list styling */
+.about-list {
+  list-style: none; /* Removes default bullets */
+  padding-left: 0; /* Removes any indentation */
+  margin-top: 20px;
+  padding-bottom: 30px;
+}
+
+/* Add custom image as list item icon */
+.about-list li {
+  color: #b0b0b0;
+  position: relative;
+  padding-left: 30px; /* Space for the custom icon */
+  margin-bottom: 15px; /* Space between list items */
+  font-size: 20px;
+}
+
+/* Use image as the list icon */
+.about-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%; /* Centers the icon vertically */
+  transform: translateY(-50%); /* Centers the icon vertically */
+  width: 20px; /* Icon size */
+  height: 20px; /* Icon size */
+  background-image: url("../img/about-list-icon.png");
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensures the icon scales correctly */
+  border-radius: 50%; /* Makes the icon round */
+}
+
+/* Styling the pink border container for the video */
+.pink-border-container {
+  border: 3px solid #f8a2e1; /* Pink border color */
+  border-radius: 12px; /* Rounded corners */
+  width: 500px; /* Fixed width */
+  height: 500px; /* Fixed height for square */
+  margin: 0 auto; /* Centers the container */
+  overflow: hidden; /* Ensures video stays inside */
+}
+
+/* Styling the video to fit the container */
+.grayscale-image {
+  width: 100%; /* Video fills the container width */
+  height: 100%; /* Video fills the container height */
+  object-fit: cover; /* Ensures the video fills the container without stretching */
+}
+
+/* choose section about */
+
+.choose-section-about {
+  background-color: #141414;
+}
+
+.choose-section-about .dark-version {
+  display: block;
+}
+
+.choose-section-about .light-version {
+  display: none;
+}
+
+/* single choose item */
+.single-choose-item {
+  padding: 40px 30px;
+  text-align: center;
+  border: 1px solid #4f4f4f;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.single-choose-item img {
+  width: auto;
+  margin: 0 auto 20px;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  opacity: 0.5;
+}
+
+.single-choose-item h4 {
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  opacity: 0.5;
+}
+
+.single-choose-item p {
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  opacity: 0.5;
+}
+
+.single-choose-item.active {
+  border: 1px solid #f8a2e1;
+}
+
+.single-choose-item.active img {
+  opacity: 1;
+}
+
+.single-choose-item.active h4 {
+  opacity: 1;
+}
+
+.single-choose-item.active p {
+  opacity: 1;
+}
+
+/* Shared styles for both image containers */
+.about-us-image-container {
+  border: 3px solid #f8a2e1; /* Pink border color */
+  border-radius: 12px; /* Rounded corners for the container */
+  padding: 0; /* No padding needed inside the container */
+  width: 48%; /* Take up nearly half the row (adjust if needed) */
+  box-sizing: border-box; /* Includes the border in the width calculation */
+  margin-bottom: 20px; /* Add some space below on smaller screens */
+}
+
+.about-us-image-container img {
+  width: 100%; /* Make the image fill the container's width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures the image fills the container */
+  border-radius: 12px; /* Same as the container border radius */
+  display: block;
+}
+
+/* Flexbox for aligning images side by side */
+.about-us-images {
+  display: flex;
+  justify-content: space-between; /* Creates space between the two images */
+  align-items: flex-start; /* Aligns images at the top */
+  gap: 20px; /* Adds consistent spacing between the images */
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .about-us-images {
+    flex-direction: column; /* Stacks images vertically on small screens */
+  }
+
+  .about-us-image-container {
+    width: 100%; /* Full width for smaller screens */
+  }
+}
+.title_one {
+  font-weight: bold; /* Makes the text bold */
+  font-size: 3rem; /* Adjust font size as needed */
+  text-transform: uppercase; /* Makes the text uppercase */
+  color: white;
+}
+
+.title_one .highlight {
+  color: #f8a2e1; /* Pink color for the #1 part */
+}
+
+.are-you-ready-image-container {
+  width: 100%;
+  border: 3px solid #f8a2e1; /* Pink border color */
+  border-radius: 12px; /* Rounded corners for the container */
+  display: block; /* Ensures the container behaves like a block element */
+  overflow: hidden; /* Ensures the image doesn't overflow the container's rounded corners */
+}
+
+.are-you-ready-image-container img {
+  width: 100%; /* Ensures the image fits the container */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 12px; /* Matches the container's border-radius */
+}
