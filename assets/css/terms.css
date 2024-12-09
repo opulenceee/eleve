@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap");
+
+/* terms content */
+.terms-sdd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-top {
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.section-top p {
+  display: block;
+  text-align: center;
+  max-width: 600px;
+  line-height: 1.5;
+  word-break: keep-all; /* Prevents breaking words */
+  overflow-wrap: break-word; /* Allows breaking long words if necessary */
+  white-space: normal; /* Ensures normal paragraph wrapping */
+}
+
+h4 {
+  color: #f8a2e1;
+}
+
+h3 {
+  font-size: 36px;
+}

@@ -13,6 +13,7 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   background-color: #141414;
+  line-height: 1.5;
 }
 
 p {
@@ -48,194 +49,6 @@ img {
   width: 100%;
   height: auto;
   display: block;
-}
-
-header {
-  background-color: #141414;
-  color: #fff;
-  padding: 20px 0;
-  position: fixed;
-  width: 100%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  font-size: 20px;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-nav ul {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  margin-right: 20px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 20px;
-}
-
-nav a:hover {
-  color: #f8a2e1;
-}
-
-.cta-button {
-  background-color: #f8a2e1;
-  border: none;
-  color: #000;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 15px;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Adding transition for background and text color */
-}
-
-.cta-button:hover {
-  background-color: transparent; /* Fades out the background color */
-  color: #f8a2e1; /* Changes text color to pink */
-  border: 1px solid #f8a2e1; /* Optionally, add a border in pink */
-}
-
-footer {
-  background-color: #141414; /* Dark background for contrast */
-  color: #fff; /* White text for visibility */
-  padding: 20px;
-  text-align: center;
-  font-family: "Inter", sans-serif; /* Modern font */
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px 0;
-  border-bottom: 2px solid #f8a2e1; /* Pink underline */
-}
-
-.footer-links a {
-  color: #f8a2e1; /* Pink text for links */
-  text-decoration: none;
-  margin-left: 15px;
-}
-
-.footer-links a:hover {
-  text-decoration: none;
-}
-
-.disclaimer {
-  font-size: 12px;
-  color: #ccc; /* Subtle gray text */
-  margin-top: 10px;
-}
-
-/* Pink Border Container */
-.footer-highlight {
-  margin: 20px auto;
-  padding: 20px 40px;
-  max-width: 1200px; /* Adjust width as needed */
-  height: 40px; /* Adjust height for better visibility */
-  background-color: #141414;
-  color: #000;
-  border: 1px solid #4f4f4f;
-  border-radius: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  align-items: center;
-}
-
-/* Align items in the footer-highlight container with space between them */
-.footer-highlight-container {
-  display: flex;
-  justify-content: space-between; /* Distribute items evenly with space between */
-  align-items: center; /* Align items vertically */
-  gap: 20px; /* Add space between items */
-}
-
-/* Style each footer item */
-.footer-item {
-  text-align: center;
-  font-size: 18px;
-}
-
-/* Logo styling */
-.footer-item img {
-  max-width: 100px; /* Ensure logo is not too large */
-}
-
-/* Social Button with pink border */
-.social-button {
-  padding: 10px 20px;
-  color: #ffffff;
-  background-color: transparent;
-  border: 2px solid white;
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 22px;
-}
-
-.social-button:hover {
-  color: #f8a2e1;
-  color: white;
-  text-decoration: none;
-  border: 2px solid #f8a2e1;
-}
-
-/* Phone Number & Location styling */
-.phone-number,
-.location {
-  font-size: 22px;
-  font-weight: 500;
-  color: #ffffff;
-}
-
-/* Link styling */
-.footer-highlight a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.footer-highlight a:hover {
-  color: #f8a2e1;
-}
-
-/* Make "Made For" section at the bottom of the page */
-.made-for {
-  margin-top: 40px;
-  padding-top: 20px;
-  text-align: center;
-  color: #ccc;
-}
-
-.made-for a {
-  color: #f8a2e1;
-}
-
-.made-for a:hover {
-  text-decoration: underline;
 }
 
 /* Marquee Styles */
@@ -1017,4 +830,22 @@ h2 span {
   width: 100%; /* Ensures the image fits the container */
   height: auto; /* Maintains aspect ratio */
   border-radius: 12px; /* Matches the container's border-radius */
+}
+
+h4 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
+  line-height: 1.2;
+  margin-bottom: 0;
 }

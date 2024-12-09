@@ -1,0 +1,121 @@
+footer {
+  background-color: #141414; /* Dark background for contrast */
+  color: #fff; /* White text for visibility */
+  padding: 20px;
+  text-align: center;
+  font-family: "Inter", sans-serif; /* Modern font */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 0;
+  border-bottom: 2px solid #f8a2e1; /* Pink underline */
+}
+
+.footer-links a {
+  color: #f8a2e1; /* Pink text for links */
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.footer-links a:hover {
+  text-decoration: none;
+}
+
+.disclaimer {
+  font-size: 12px;
+  color: #ccc; /* Subtle gray text */
+  margin-top: 10px;
+}
+
+/* Pink Border Container */
+.footer-highlight {
+  margin: 20px auto;
+  padding: 20px 40px;
+  max-width: 1200px; /* Adjust width as needed */
+  height: 40px; /* Adjust height for better visibility */
+  background-color: #141414;
+  color: #000;
+  border: 1px solid #4f4f4f;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  align-items: center;
+}
+
+/* Align items in the footer-highlight container with space between them */
+.footer-highlight-container {
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly with space between */
+  align-items: center; /* Align items vertically */
+  gap: 20px; /* Add space between items */
+}
+
+/* Style each footer item */
+.footer-item {
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Logo styling */
+.footer-item img {
+  max-width: 100px; /* Ensure logo is not too large */
+}
+
+/* Social Button with pink border */
+.social-button {
+  padding: 10px 20px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.social-button:hover {
+  color: #f8a2e1;
+  color: white;
+  text-decoration: none;
+  border: 2px solid #f8a2e1;
+}
+
+/* Phone Number & Location styling */
+.phone-number,
+.location {
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Link styling */
+.footer-highlight a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-highlight a:hover {
+  color: #f8a2e1;
+}
+
+/* Make "Made For" section at the bottom of the page */
+.made-for {
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  color: #ccc;
+}
+
+.made-for a {
+  color: #f8a2e1;
+}
+
+.made-for a:hover {
+  text-decoration: underline;
+}
