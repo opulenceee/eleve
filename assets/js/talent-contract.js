@@ -19,6 +19,14 @@ function getModelNameFromUsername(username) {
   return "Model's Full Name"; // Default if the format is incorrect
 }
 
+// Function to clear form fields
+function clearContractForm() {
+  document.getElementById("name").value = "";
+  document.getElementById("usernameForm").value = "";
+  document.getElementById("passwordForm").value = "";
+  document.getElementById("privacy-policy").checked = false;
+}
+
 // Function to show the contract content and hide the password form
 function showContractContent() {
   // Hide the password form and show the contract content
@@ -105,8 +113,7 @@ document
       const currentDate = getCurrentDate();
 
       // Structured submission matching backend expectations
-      // Update the fetch call in your talent-contract.js
-      fetch("http://127.0.0.1:5000/submit-form", {
+      fetch("https://eleve.space/submit-form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -122,6 +129,8 @@ document
         .then((response) => response.json())
         .then((data) => {
           alert(data.message);
+          clearContractForm(); // Clear the form
+          window.location.href = "/"; // Redirect to home page
         })
         .catch((error) => {
           console.error("Submission error:", error);

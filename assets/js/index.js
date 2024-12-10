@@ -45,6 +45,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Function to clear form fields
+  function clearForm() {
+    // Clear all text, email, and number inputs
+    form
+      .querySelectorAll(
+        'input[type="text"], input[type="email"], input[type="number"], input[type="tel"]'
+      )
+      .forEach((input) => {
+        input.value = "";
+      });
+
+    // Clear textareas if any
+    form.querySelectorAll("textarea").forEach((textarea) => {
+      textarea.value = "";
+    });
+
+    // Clear file inputs if any
+    form.querySelectorAll('input[type="file"]').forEach((fileInput) => {
+      fileInput.value = "";
+    });
+
+    document.getElementById("facebrowser").value = "";
+  }
+
   // Add event listeners to user type radio buttons
   userTypeRadios.forEach((radio) => {
     radio.addEventListener("change", toggleUserFields);
@@ -66,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     try {
       // Send data to the Python backend
-      const response = await fetch("http://127.0.0.1:5000/submit-form", {
+      const response = await fetch("https://eleve.space/submit-form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -77,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const result = await response.json();
       if (response.ok) {
         alert(result.message);
+        clearForm(); // Clear the form after successful submission
       } else {
         alert("Failed to submit the form.");
       }

@@ -5,9 +5,17 @@ import os
 import requests
 from datetime import datetime, timezone
 from werkzeug.utils import secure_filename
+import logging
+
+# Set up logging
+logging.basicConfig(
+    filename='app.log',
+    level=logging.INFO,
+    format='%(asctime)s %(levelname)s: %(message)s'
+)
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=['https://eleve.space'])
 
 MODEL_WEBHOOK_URL = os.getenv("MODEL_WEBHOOK_URL")
 CLIENT_WEBHOOK_URL = os.getenv("CLIENT_WEBHOOK_URL")
@@ -18,8 +26,10 @@ SUBMISSIONS_DIR = "submissions"
 CONTRACTS_DIR = "contracts"
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
+# Create directories and set permissions
 for dir in [UPLOAD_FOLDER, SUBMISSIONS_DIR, CONTRACTS_DIR]:
     os.makedirs(dir, exist_ok=True)
+    os.chmod(dir, 0o755)
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -90,6 +100,7 @@ def submit_form():
         else:
             user_type = data.get("userType", "").capitalize()
             if user_type not in ["Client", "Model"]:
+                logging.error(f"Invalid user type specified: {user_type}")
                 return jsonify({"message": "Invalid user type specified."}), 400
                 
             name = secure_filename(data.get("name", "unknown"))
@@ -104,13 +115,16 @@ def submit_form():
         
         if response.status_code == 204:
             message = "Contract signed successfully!" if submission_type == "Contract" else "Form submitted successfully!"
+            logging.info(f"Successful submission: {message}")
             return jsonify({"message": message, "status": "success"}), 200
         else:
-            print(f"Discord webhook error: {response.status_code} - {response.text}")
+            error_msg = f"Discord webhook error: {response.status_code} - {response.text}"
+            logging.error(error_msg)
             return jsonify({"message": "Submission saved but notification failed.", "status": "partial_success"}), 207
 
     except Exception as e:
-        print(f"Error processing submission: {str(e)}")
+        error_msg = f"Error processing submission: {str(e)}"
+        logging.error(error_msg)
         return jsonify({
             "message": "An error occurred while processing your submission.",
             "status": "error",
@@ -118,4 +132,4 @@ def submit_form():
         }), 500
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000)
