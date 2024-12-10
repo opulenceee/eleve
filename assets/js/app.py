@@ -88,9 +88,21 @@ def format_contract_embed(data):
 @app.route('/submit-form', methods=['POST'])
 def submit_form():
     try:
-        data = request.json
+        data = request.form.to_dict()  # Using form to handle file uploads
         submission_type = data.get("submissionType", "")
         timestamp = datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')
+
+        if 'attachment' in request.files:
+            file = request.files['attachment']
+            if file and allowed_file(file.filename):
+                filename = secure_filename(file.filename)
+                file_path = os.path.join(UPLOAD_FOLDER, f"{filename}_{timestamp}")
+                file.save(file_path)
+                data["attachment"] = file_path
+            else:
+                return jsonify({"message": "Invalid file type."}), 400
+        else:
+            data["attachment"] = None
 
         if submission_type == "Contract":
             username = secure_filename(data.get("username", "unknown"))

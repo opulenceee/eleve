@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contactForm");
 
   // Function to toggle field visibility
-  function toggleUserFields() {
+  function toggleFields() {
     const isClient =
       document.querySelector('input[name="userType"]:checked').value ===
       "Client";
@@ -71,31 +71,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Add event listeners to user type radio buttons
   userTypeRadios.forEach((radio) => {
-    radio.addEventListener("change", toggleUserFields);
+    radio.addEventListener("change", toggleFields);
   });
 
   // Initial setup
-  toggleUserFields();
+  toggleFields();
 
   // Form submission handling
   form.addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    // Gather form data
+    // Create FormData object
     const formData = new FormData(form);
     const formObject = {};
+
     formData.forEach((value, key) => {
-      formObject[key] = value;
+      // Convert form data to a regular object
+      if (value instanceof File) {
+        formObject[key] = value; // Handle file uploads as well
+      } else {
+        formObject[key] = value;
+      }
     });
 
     try {
       // Send data to the Python backend
       const response = await fetch("https://eleve.space/submit-form", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formObject),
+        body: formData, // Send FormData to handle file uploads
       });
 
       const result = await response.json();
